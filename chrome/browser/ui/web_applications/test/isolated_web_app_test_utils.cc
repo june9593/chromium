@@ -61,7 +61,6 @@
 #include "url/origin.h"
 
 #if !BUILDFLAG(IS_CHROMEOS)
-#include "content/public/common/content_features.h"
 #endif  // !BUILDFLAG(IS_CHROMEOS)
 
 namespace web_app {
