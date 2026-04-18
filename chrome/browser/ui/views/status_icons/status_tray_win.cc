@@ -229,7 +229,7 @@ std::unique_ptr<StatusIcon> StatusTrayWin::CreatePlatformStatusIcon(
 
   icon->SetImage(image);
   icon->SetToolTip(tool_tip);
-  return std::move(icon);
+  return icon;
 }
 
 UINT StatusTrayWin::NextIconId() {
