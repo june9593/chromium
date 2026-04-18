@@ -12,7 +12,6 @@
 #endif
 
 #if BUILDFLAG(IS_MAC)
-#include "chrome/browser/ui/views/frame/browser_view.h"
 #include "chrome/browser/ui/views/frame/immersive_mode_controller_mac.h"
 #endif
 
