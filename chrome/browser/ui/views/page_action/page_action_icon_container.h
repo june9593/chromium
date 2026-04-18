@@ -20,6 +20,9 @@ class PageActionIconContainer {
   // Adds a page action icon to the container view. The container can
   // determine where to place and how to lay out the icons.
   virtual void AddPageActionIcon(std::unique_ptr<views::View> icon) = 0;
+
+ protected:
+  virtual ~PageActionIconContainer() = default;
 };
 
 // Implements a default icon container for page action icons.
