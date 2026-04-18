@@ -43,7 +43,6 @@
 #if BUILDFLAG(IS_MAC)
 #include "chrome/browser/profiles/profile.h"
 #include "chrome/browser/ui/browser_commands_mac.h"
-#include "chrome/test/base/interactive_test_utils.h"
 #endif
 
 #if BUILDFLAG(IS_CHROMEOS)
