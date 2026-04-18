@@ -36,6 +36,8 @@ class IncognitoClearBrowsingDataDialogInterface {
   // interacts with the Cancel option of the Incognito clear browsing data
   // dialog.
   virtual void OnCancelButtonClicked() = 0;
+
+  virtual ~IncognitoClearBrowsingDataDialogInterface() = default;
 };
 
 #endif  // CHROME_BROWSER_UI_INCOGNITO_CLEAR_BROWSING_DATA_DIALOG_INTERFACE_H_
