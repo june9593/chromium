@@ -22,6 +22,9 @@ class URLLoaderFactory;
 class AccountAvatarFetcherDelegate {
  public:
   virtual void UpdateAvatar(const gfx::ImageSkia& image) = 0;
+
+ protected:
+  virtual ~AccountAvatarFetcherDelegate() = default;
 };
 
 // Helper class to download an avatar. It deletes itself once the request is
