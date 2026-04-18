@@ -238,7 +238,7 @@ class IwaInternalsHandler::IwaManifestInstallUpdateHandler
     auto callback = std::move(itr->second);
     update_requests_.erase(itr);
 
-    return std::move(callback);
+    return callback;
   }
 
   const raw_ref<WebAppProvider> provider_;
