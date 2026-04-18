@@ -9,7 +9,6 @@
 class ArcAppWindowDelegate {
  public:
   ArcAppWindowDelegate() = default;
-  ~ArcAppWindowDelegate() = default;
 
   ArcAppWindowDelegate(const ArcAppWindowDelegate&) = delete;
   ArcAppWindowDelegate& operator=(const ArcAppWindowDelegate&) = delete;
@@ -19,6 +18,9 @@ class ArcAppWindowDelegate {
 
   // Returns the active session id for ARC ghost windows.
   virtual int GetActiveSessionId() const = 0;
+
+ protected:
+  virtual ~ArcAppWindowDelegate() = default;
 };
 
 #endif  // CHROME_BROWSER_UI_ASH_SHELF_ARC_APP_WINDOW_DELEGATE_H_
