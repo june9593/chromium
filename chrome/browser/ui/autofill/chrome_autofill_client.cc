@@ -201,12 +201,9 @@
 #include "chrome/browser/ui/page_info/page_info_dialog.h"
 #include "chrome/browser/ui/plus_addresses/plus_address_menu_model.h"  // nogncheck
 #include "chrome/browser/ui/tabs/public/tab_features.h"  // nogncheck
-#include "chrome/browser/ui/toasts/api/toast_id.h"
-#include "chrome/browser/ui/toasts/toast_controller.h"
 #include "chrome/browser/ui/views/autofill/popup/popup_view_views.h"
 #include "chrome/browser/ui/webui/signin/login_ui_service_factory.h"
 #include "components/autofill/core/browser/integrators/autofill_ai/autofill_ai_manager.h"
-#include "components/autofill/core/browser/integrators/autofill_ai/autofill_ai_manager.h"  // nogncheck
 #endif  // BUILDFLAG(IS_ANDROID)
 
 #if BUILDFLAG(ENABLE_COMPOSE)
