@@ -40,7 +40,7 @@ std::unique_ptr<views::View> CreateContentsScrollView(
   scroll_view->SetHorizontalScrollBarMode(
       views::ScrollView::ScrollBarMode::kDisabled);
   scroll_view->SetContents(std::move(contents_view));
-  return std::move(scroll_view);
+  return scroll_view;
 }
 
 ButtonModel CreateButtonModel(const ButtonModel::Params& params) {
