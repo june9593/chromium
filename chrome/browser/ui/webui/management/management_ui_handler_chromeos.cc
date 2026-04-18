@@ -40,7 +40,6 @@
 #include "chrome/browser/profiles/profile.h"
 #include "chrome/browser/ui/managed_ui.h"
 #include "chrome/browser/ui/webui/management/management_ui_constants.h"
-#include "chrome/browser/ui/webui/management/management_ui_handler_chromeos.h"
 #include "chrome/common/pref_names.h"
 #include "chrome/grit/branded_strings.h"
 #include "chromeos/ash/components/browser_context_helper/browser_context_helper.h"
