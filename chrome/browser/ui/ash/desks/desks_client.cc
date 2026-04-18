@@ -452,7 +452,7 @@ DesksClient::GetAllDesks() {
   for (const auto& desk : desks_controller_->desks()) {
     desks.push_back(desk.get());
   }
-  return std::move(desks);
+  return desks;
 }
 
 void DesksClient::LaunchAppsFromTemplate(
