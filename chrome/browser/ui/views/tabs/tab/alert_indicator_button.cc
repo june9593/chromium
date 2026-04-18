@@ -515,7 +515,7 @@ AlertIndicatorButton::CreateTabAlertIndicatorFadeAnimation(
   auto animation =
       std::make_unique<gfx::MultiAnimation>(parts, kIndicatorFrameInterval);
   animation->set_continuous(false);
-  return std::move(animation);
+  return animation;
 }
 
 void AlertIndicatorButton::UpdateIconForAlertState(tabs::TabAlert state) {
