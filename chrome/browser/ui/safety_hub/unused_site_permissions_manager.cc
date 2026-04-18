@@ -215,7 +215,7 @@ UnusedSitePermissionsManager::UpdateOnBackgroundThread(
   }
 
   result->SetRecentlyUnusedPermissions(recently_unused);
-  return std::move(result);
+  return result;
 }
 
 // static
