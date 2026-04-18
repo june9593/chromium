@@ -62,7 +62,6 @@
 #include "ui/views/view_class_properties.h"
 
 #if !BUILDFLAG(IS_ANDROID)
-#include "base/feature_list.h"
 #include "base/time/time.h"
 #include "base/types/expected.h"
 #include "chrome/browser/glic/suggestions/contextual_cueing_features.h"
