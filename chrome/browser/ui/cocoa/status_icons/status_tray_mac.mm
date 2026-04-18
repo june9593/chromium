@@ -22,5 +22,5 @@ std::unique_ptr<StatusIcon> StatusTrayMac::CreatePlatformStatusIcon(
   auto icon = std::make_unique<StatusIconMac>();
   icon->SetImage(image);
   icon->SetToolTip(tool_tip);
-  return std::move(icon);
+  return icon;
 }
