@@ -42,6 +42,9 @@ class DownloadBubbleNavigationHandler {
   PreventDialogCloseOnDeactivate() = 0;
 
   virtual base::WeakPtr<DownloadBubbleNavigationHandler> GetWeakPtr() = 0;
+
+ protected:
+  virtual ~DownloadBubbleNavigationHandler() = default;
 };
 
 #endif  // CHROME_BROWSER_UI_VIEWS_DOWNLOAD_BUBBLE_DOWNLOAD_BUBBLE_NAVIGATION_HANDLER_H_
