@@ -136,7 +136,6 @@
 
 #if !BUILDFLAG(IS_ANDROID)
 #include "chrome/browser/skills/skills_update_observer.h"
-#include "components/skills/features.h"
 #endif  // !BUILDFLAG(IS_ANDROID)
 
 #if BUILDFLAG(IS_CHROMEOS)
