@@ -38,6 +38,9 @@ class GlicButtonInterface {
   // Expose the property handler via a virtual method to avoid diamond
   // inheritance when using GlicButtonInterface in addition to a view.
   virtual ui::PropertyHandler* GetPropertyHandler() = 0;
+
+ protected:
+  virtual ~GlicButtonInterface() = default;
 };
 }  // namespace glic
 
