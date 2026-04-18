@@ -40,6 +40,9 @@ class ExclusiveAccessBubbleViewsContext {
   // owner to clean up when the bubble observes its native widget being
   // destroyed before the owner requested it.
   virtual void DestroyAnyExclusiveAccessBubble() = 0;
+
+ protected:
+  virtual ~ExclusiveAccessBubbleViewsContext() = default;
 };
 
 #endif  // CHROME_BROWSER_UI_VIEWS_EXCLUSIVE_ACCESS_BUBBLE_VIEWS_CONTEXT_H_
