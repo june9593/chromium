@@ -13,7 +13,6 @@
 #include "chrome/browser/ui/android/autofill/payments/payments_window_bridge.h"
 #include "chrome/browser/ui/android/autofill/payments/payments_window_delegate.h"
 #include "chrome/browser/ui/autofill/chrome_autofill_client.h"
-#include "chrome/browser/ui/autofill/payments/android_payments_window_manager.h"
 #include "chrome/browser/ui/autofill/payments/android_payments_window_manager_test_api.h"
 #include "chrome/browser/ui/autofill/payments/chrome_payments_autofill_client.h"
 #include "chrome/test/base/chrome_render_view_host_test_harness.h"
