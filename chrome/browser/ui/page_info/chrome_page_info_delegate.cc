@@ -486,7 +486,7 @@ std::unique_ptr<content_settings::PageSpecificContentSettings::Delegate>
 ChromePageInfoDelegate::GetPageSpecificContentSettingsDelegate() {
   auto delegate =
       std::make_unique<PageSpecificContentSettingsDelegate>(web_contents_);
-  return std::move(delegate);
+  return delegate;
 }
 
 #if BUILDFLAG(IS_ANDROID)
