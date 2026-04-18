@@ -83,6 +83,9 @@ class ProfilePickerWebContentsHost {
   // Returns the background colors that other `content::WebContents` that are
   // rendered by this host should use to match the toolbar.
   virtual SkColor GetPreferredBackgroundColor() const = 0;
+
+ protected:
+  virtual ~ProfilePickerWebContentsHost() = default;
 };
 
 #endif  // CHROME_BROWSER_UI_VIEWS_PROFILES_PROFILE_PICKER_WEB_CONTENTS_HOST_H_
