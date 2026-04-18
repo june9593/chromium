@@ -57,7 +57,7 @@ std::unique_ptr<views::View> CreatePasskeyWithUsernameLabel(
   username_view->SetElideBehavior(gfx::ElideBehavior::ELIDE_EMAIL);
 
   container->AddChildView(std::move(username_column));
-  return std::move(container);
+  return container;
 }
 
 std::unique_ptr<views::View> CreateGpmIconWithLabel() {
