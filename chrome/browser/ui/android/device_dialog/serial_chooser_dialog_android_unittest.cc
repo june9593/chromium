@@ -10,7 +10,6 @@
 #include "base/test/bind.h"
 #include "base/test/mock_callback.h"
 #include "chrome/browser/ssl/chrome_security_state_tab_helper.h"
-#include "chrome/browser/ui/android/device_dialog/serial_chooser_dialog_android.h"
 #include "chrome/browser/ui/serial/mock_serial_chooser_controller.h"
 #include "chrome/browser/ui/serial/serial_chooser_controller.h"
 #include "chrome/test/base/chrome_render_view_host_test_harness.h"
