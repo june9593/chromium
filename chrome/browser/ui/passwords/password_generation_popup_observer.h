@@ -13,6 +13,9 @@ class PasswordGenerationPopupObserver {
   virtual void OnPopupShown(
       PasswordGenerationPopupController::GenerationUIState state) = 0;
   virtual void OnPopupHidden() = 0;
+
+ protected:
+  virtual ~PasswordGenerationPopupObserver() = default;
 };
 
 #endif  // CHROME_BROWSER_UI_PASSWORDS_PASSWORD_GENERATION_POPUP_OBSERVER_H_
