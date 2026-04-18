@@ -30,6 +30,9 @@ class ProfilePickerSignInProviderDelegate {
   // Shows a sign-in error to the user.
   virtual void ShowSigninError(Profile* profile,
                                const SigninUIError& error) = 0;
+
+ protected:
+  virtual ~ProfilePickerSignInProviderDelegate() = default;
 };
 
 BASE_DECLARE_FEATURE(kProfilePickerGaiaBlankContinueUrl);
