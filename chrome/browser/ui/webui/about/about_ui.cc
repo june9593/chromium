@@ -69,7 +69,6 @@
 #include "ash/constants/webui_url_constants.h"
 #include "ash/strings/grit/ash_strings.h"
 #include "base/base64.h"
-#include "base/strings/strcat.h"
 #include "chrome/browser/ash/borealis/borealis_credits.h"
 #include "chrome/browser/ash/crostini/crostini_features.h"
 #include "chrome/browser/ash/crostini/crostini_manager.h"
