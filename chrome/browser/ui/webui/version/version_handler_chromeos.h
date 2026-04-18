@@ -31,8 +31,9 @@ class VersionHandlerChromeOS : public VersionHandler {
   void OnArcAndArcAndroidSdkVersions(const std::string& version);
 
  private:
-  base::WeakPtrFactory<VersionHandlerChromeOS> weak_factory_{this};
   static std::string GetArcAndArcAndroidSdkVersions();
+
+  base::WeakPtrFactory<VersionHandlerChromeOS> weak_factory_{this};
 };
 
 #endif  // CHROME_BROWSER_UI_WEBUI_VERSION_VERSION_HANDLER_CHROMEOS_H_
