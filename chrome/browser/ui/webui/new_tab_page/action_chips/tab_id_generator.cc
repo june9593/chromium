@@ -5,7 +5,6 @@
 #include "chrome/browser/ui/webui/new_tab_page/action_chips/tab_id_generator.h"
 
 #include "base/no_destructor.h"
-#include "chrome/browser/ui/webui/new_tab_page/action_chips/tab_id_generator.h"
 #include "components/sessions/content/session_tab_helper.h"
 #include "components/tabs/public/tab_handle_factory.h"
 #include "components/tabs/public/tab_interface.h"
