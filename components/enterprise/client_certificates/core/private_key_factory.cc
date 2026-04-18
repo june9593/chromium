@@ -4,7 +4,9 @@
 
 #include "components/enterprise/client_certificates/core/private_key_factory.h"
 
+#include <algorithm>
 #include <array>
+#include <iterator>
 #include <optional>
 
 #include "base/functional/callback.h"
@@ -121,17 +123,26 @@ void PrivateKeyFactoryImpl::OnPrivateKeyCreated(
     PrivateKeySource source,
     PrivateKeyCallback callback,
     scoped_refptr<PrivateKey> private_key) {
-  if (!private_key && source != PrivateKeySource::kSoftwareKey) {
-    for (auto fallback_source =
-             ++std::find(std::begin(kKeySourcesOrderedBySecurity),
-                         std::end(kKeySourcesOrderedBySecurity), source);
+  if (!private_key) {
+    // Locate `source` in the ordered list and try to fall back to the
+    // immediately less-secure entries, in order. `std::find` returns end() if
+    // `source` is not present in the array (e.g., a future enum value missing
+    // from `kKeySourcesOrderedBySecurity`); incrementing that result would be
+    // undefined behavior, so handle the not-found case explicitly. When
+    // `source` is the last (least secure) entry, `std::next(it)` equals end()
+    // and the loop simply does not execute.
+    const auto it = std::ranges::find(kKeySourcesOrderedBySecurity, source);
+    const auto fallback_begin = (it == std::end(kKeySourcesOrderedBySecurity))
+                                    ? std::end(kKeySourcesOrderedBySecurity)
+                                    : std::next(it);
+    for (auto fallback_source = fallback_begin;
          fallback_source != std::end(kKeySourcesOrderedBySecurity);
-         fallback_source++) {
-      auto it = sub_factories_.find(*fallback_source);
-      if (it != sub_factories_.end()) {
+         ++fallback_source) {
+      auto sub_it = sub_factories_.find(*fallback_source);
+      if (sub_it != sub_factories_.end()) {
         // If a more secure key failed to be created, fallback to creating a
         // less secure key.
-        it->second->CreatePrivateKey(base::BindOnce(
+        sub_it->second->CreatePrivateKey(base::BindOnce(
             &PrivateKeyFactoryImpl::OnPrivateKeyCreated,
             weak_factory_.GetWeakPtr(), *fallback_source, std::move(callback)));
         return;
