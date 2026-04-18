@@ -7,7 +7,6 @@
 #include "ash/public/cpp/test/shell_test_api.h"
 #include "ash/shell.h"
 #include "ash/webui/system_apps/public/system_web_app_type.h"
-#include "ash/wm/float/float_controller.h"
 #include "ash/wm/float/float_test_api.h"
 #include "ash/wm/window_state.h"
 #include "chrome/browser/profiles/profile_manager.h"
