@@ -238,7 +238,6 @@
 #if BUILDFLAG(ENABLE_LENS_DESKTOP_GOOGLE_BRANDED_FEATURES)
 #include "chrome/browser/lens/region_search/lens_region_search_controller.h"
 #include "chrome/browser/lens/region_search/lens_region_search_helper.h"
-#include "components/lens/lens_features.h"
 #endif
 
 #if !BUILDFLAG(IS_ANDROID)
