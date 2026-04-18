@@ -109,6 +109,9 @@ class SidePanelUI {
   // Prevent content swapping delays from happening for testing.
   // This should be called before the side panel is first shown.
   virtual void SetNoDelaysForTesting(bool no_delays_for_testing) = 0;
+
+ protected:
+  virtual ~SidePanelUI() = default;
 };
 
 #endif  // CHROME_BROWSER_UI_SIDE_PANEL_SIDE_PANEL_UI_H_
