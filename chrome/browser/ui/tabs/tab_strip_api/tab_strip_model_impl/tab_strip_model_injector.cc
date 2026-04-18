@@ -21,7 +21,7 @@ base::expected<mojom::TabPtr, mojo_base::mojom::ErrorPtr> Translator::ToMojoTab(
   auto mojo_tab = tabs_api::converters::BuildMojoTab(
       tab_handle.Get(), color_provider,
       tab_strip_model_adapter_->GetTabStates(tab_handle));
-  return std::move(mojo_tab);
+  return mojo_tab;
 }
 
 base::expected<mojom::DataPtr, mojo_base::mojom::ErrorPtr>
