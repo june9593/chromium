@@ -62,8 +62,6 @@
 #endif
 
 #if BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
-#include "base/check_deref.h"
-#include "chrome/browser/browser_process.h"
 #include "chrome/browser/global_features.h"
 #include "components/application_locale_storage/application_locale_storage.h"
 #endif  // BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
