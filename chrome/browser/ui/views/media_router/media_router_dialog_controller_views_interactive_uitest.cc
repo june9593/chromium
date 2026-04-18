@@ -27,7 +27,6 @@
 #include "ui/views/widget/widget.h"
 
 #if BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_WIN)
-#include "chrome/browser/ui/views/global_media_controls/media_dialog_view.h"
 #endif
 
 using content::WebContents;
