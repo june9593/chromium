@@ -59,7 +59,7 @@ class SessionControllerImpl : public TabStripServiceImpl::SessionController {
         &SessionControllerImpl::EndSession, base::Unretained(this)));
     session_in_progress_ = true;
 
-    return std::move(session);
+    return session;
   }
 
   void EndSession() {
