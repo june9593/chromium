@@ -274,7 +274,7 @@ std::optional<lens::ImageCropAndBitmap> DownscaleAndEncodeBitmapRegionIfNeeded(
     image_crop.mutable_image()->mutable_image_content()->assign(data->begin(),
                                                                 data->end());
   }
-  return std::move(image_crop_and_bitmap);
+  return image_crop_and_bitmap;
 }
 
 lens::mojom::CenterRotatedBoxPtr GetCenterRotatedBoxFromTabViewAndImageBounds(
