@@ -19,6 +19,9 @@ class PerformanceInterventionBubbleObserver {
   // Called when the performance intervention dialog's deactivate tab
   // button (Ok) is clicked.
   virtual void OnDeactivateButtonClicked() = 0;
+
+ protected:
+  virtual ~PerformanceInterventionBubbleObserver() = default;
 };
 
 #endif  // CHROME_BROWSER_UI_PERFORMANCE_CONTROLS_PERFORMANCE_INTERVENTION_BUBBLE_OBSERVER_H_
