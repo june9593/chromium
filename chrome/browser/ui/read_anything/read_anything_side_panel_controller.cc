@@ -286,7 +286,7 @@ ReadAnythingSidePanelController::CreateContainerView(
   ReadAnythingSidePanelControllerGlue::CreateForWebContents(
       web_view->contents_wrapper()->web_contents(), this);
   web_view_ = web_view->GetWeakPtr();
-  return std::move(web_view);
+  return web_view;
 }
 
 int ReadAnythingSidePanelController::GetPreferredDefaultWidth() {
