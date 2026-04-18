@@ -254,7 +254,6 @@ void BookmarkMenuBridge::ClearBookmarkMenu() {
     // with submenus are submenus of bookmarks.
     if (([item action] == @selector(openBookmarkMenuItem:)) ||
         [item hasSubmenu] || [item isSeparatorItem]) {
-      // This will eventually [obj release] all its kids, if it has any.
       [menu_root_ removeItem:item];
     } else {
       // Leave it alone.
